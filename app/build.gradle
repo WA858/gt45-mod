@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.g45.pro.modmenu'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.g45.pro.modmenu"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // استخدام الحد الأدنى الصافي لتجنب أخطاء تفتيت الموارد في AAPT2
+    implementation 'androidx.core:core:1.9.0'
+}
